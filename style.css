@@ -1,0 +1,21 @@
+.cursor {
+  border-radius: 50%;
+  background: red;
+  width: 10px;
+  height: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.click {
+  border-radius: 50%;
+  background: red;
+  position: fixed;
+  width: 20px;
+  height: 20px;
+}
+
+h1 {
+    color: green;
+}
