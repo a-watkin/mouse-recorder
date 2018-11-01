@@ -6,28 +6,18 @@ var currentX;
 var currentY;
 
 $(function() {
-  //    var pathname = window.location.pathname; // Returns path only
   var url = window.location.href; // Returns full URL
 
   $("h4").text("The current page URL is: " + url);
 
   $(document).click(function() {
-    //        recordClick();
-
     clicked = "clicked" + " at " + currentX + " by " + currentY;
 
     clicked = "clicked" + " at " + currentX + " by " + currentY;
-    ////            alert('clicked' + " at " + currentX + " by " + currentY);
     $("ul").append("<li>" + clicked + "</li>");
   });
 
-  //    function recordClick() {
-  //
-  //        $("ul").append("<ul>" + clicked);
-  //
-  //    }
-
-  // from stackoverflow
+  // this function is from stackoverflow
   function generateUUID() {
     // Public Domain/MIT
     var d = new Date().getTime();
@@ -67,7 +57,6 @@ $(function() {
     // push the coordinates into an array
     // if you have this here it breaks the function
     // obj.push({event.pageX, event.pageY});
-
     currentX = event.pageX;
     currentY = event.pageY;
 
@@ -109,13 +98,10 @@ $(function() {
       $("#record").text("Continue recording");
 
       record = false;
-      //            $(document).unbind('mousemove', e);
     }
   });
 
   $("#play").on("click", function() {
-    //        alert(move[0].x + " by " + move[0].y);
-
     if (record == true) {
       // stop capturing data
       record = false;
