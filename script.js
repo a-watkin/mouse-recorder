@@ -54,6 +54,7 @@ $(function() {
     "The page width is " + pageWidth + " the page length is " + pageHeight
   );
 
+  // event handler for window size
   window.onresize = function() {
     document.getElementById("sub-heading").innerHTML =
       " window height " +
@@ -64,7 +65,7 @@ $(function() {
 
   $(document).mousemove(function(event) {
     // push the coordinates into an array
-    // so if you have this hear it breaks the function
+    // if you have this here it breaks the function
     // obj.push({event.pageX, event.pageY});
 
     currentX = event.pageX;
@@ -79,21 +80,8 @@ $(function() {
         move.length
     );
 
-    //            $(document).mousemove(function(e) {
-    //        $("span").text("X: " + event.pageX + ", Y: " + event.pageY + " the length of the coordinate data is " + move.length);
-    //    })
-
     x = event.pageX;
     y = event.pageY;
-
-    //        alert(move.length);
-    //        alert(x + " by " + y);
-
-    // so it does set them
-    // alert(x, y);
-    //
-    // alert(x);
-    //        obj.push([x, y]);
   });
 
   $("#record").on("click", function() {
@@ -154,7 +142,8 @@ $(function() {
       if (i === len) {
         clearTimeout(t);
       } else {
-        t = setTimeout(anim, 1);
+        // second argument here controls the playback time
+        t = setTimeout(anim, 40);
       }
     })();
   });
