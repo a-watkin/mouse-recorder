@@ -4,6 +4,8 @@ A small demo project to record mouse movements and play them back.
 
 A JS array is used to store mouse coordinates.
 
+Clicks are also recorded and logged to the screen.
+
 Play back is done with jQuery and CSS.
 
 Uses:
@@ -11,3 +13,5 @@ Uses:
 1. jQuery
 2. HTML
 3. CSS
+
+[See a live version here](http://adevwatkin.com/mouse-recorder/)
