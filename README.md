@@ -4,7 +4,7 @@ A small demo project to record mouse movements and play them back.
 
 A JS array is used to store mouse coordinates.
 
-Clicks are also recorded and logged to the screen.
+Clicks are also recorded and logged to the screen along with the window size and a UUID.
 
 Play back is done with jQuery and CSS.
 
