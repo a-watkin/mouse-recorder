@@ -14,4 +14,4 @@ Uses:
 2. HTML
 3. CSS
 
-[See a live version here](http://adevwatkin.com/mouse-recorder/)
+[See a live version here](https://a-watkin.github.io/old-project-page/mouse-recorder/)
