@@ -5,12 +5,12 @@ var record = true;
 var currentX;
 var currentY;
 
-$(function() {
+$(function () {
   var url = window.location.href; // Returns full URL
 
   $("h4").text("The current page URL is: " + url);
 
-  $(document).click(function() {
+  $(document).click(function () {
     clicked = "clicked" + " at " + currentX + " by " + currentY;
 
     clicked = "clicked" + " at " + currentX + " by " + currentY;
@@ -27,7 +27,7 @@ $(function() {
     ) {
       d += performance.now(); //use high-precision timer if available
     }
-    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(c) {
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
       var r = (d + Math.random() * 16) % 16 | 0;
       d = Math.floor(d / 16);
       return (c === "x" ? r : (r & 0x3) | 0x8).toString(16);
@@ -45,7 +45,7 @@ $(function() {
   );
 
   // event handler for window size
-  window.onresize = function() {
+  window.onresize = function () {
     document.getElementById("sub-heading").innerHTML =
       " window height " +
       $(window).height() +
@@ -53,7 +53,7 @@ $(function() {
       $(window).width();
   };
 
-  $(document).mousemove(function(event) {
+  $(document).mousemove(function (event) {
     // push the coordinates into an array
     // if you have this here it breaks the function
     // obj.push({event.pageX, event.pageY});
@@ -62,18 +62,18 @@ $(function() {
 
     $("span").text(
       "X: " +
-        event.pageX +
-        ", Y: " +
-        event.pageY +
-        " the length of the array of captured data is: " +
-        move.length
+      event.pageX +
+      ", Y: " +
+      event.pageY +
+      " the length of the array of captured data is: " +
+      move.length
     );
 
     x = event.pageX;
     y = event.pageY;
   });
 
-  $("#record").on("click", function() {
+  $("#record").on("click", function () {
     // change button text
     $("#record").text("Stop recording");
 
@@ -82,7 +82,7 @@ $(function() {
       buttonState = 1;
       record = true;
 
-      $(document).mousemove(function(e) {
+      $(document).mousemove(function (e) {
         if (record == true) {
           move.push({
             x: e.pageX,
@@ -101,7 +101,7 @@ $(function() {
     }
   });
 
-  $("#play").on("click", function() {
+  $("#play").on("click", function () {
     if (record == true) {
       // stop capturing data
       record = false;
